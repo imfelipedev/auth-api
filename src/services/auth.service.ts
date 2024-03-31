@@ -46,7 +46,7 @@ export class AuthService {
 
         const expires = this.getExpirationDate();
         const token = await this.jwtService.signAsync({ username: userData.username, email: userData.email });
-        response.cookie("session-token", token, { expires: expires, secure: true, httpOnly: true, path: "/" });
+        response.cookie("session-token", token, { expires: expires, secure: true, httpOnly: true, path: "/", sameSite: "none" });
         return { success: true };
     }
 

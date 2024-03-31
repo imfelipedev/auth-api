@@ -6,7 +6,15 @@ import { AppModule } from "./module";
 import { AllExceptionsFilter } from "./infrastructure/exception.middleware";
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule, { cors: true });
+    const app = await NestFactory.create(AppModule, { 
+        cors: {  
+            "origin": "*",
+            "methods": "GET,PATCH,POST,DELETE",
+            "allowedHeaders": ['Content-Type'],
+            "preflightContinue": false,
+            "optionsSuccessStatus": 204
+        } 
+    });
     const cookies = cookieParser();
     const validator = new ValidationPipe();
     const exception = new AllExceptionsFilter();

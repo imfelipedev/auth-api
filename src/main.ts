@@ -1,6 +1,6 @@
+import cookieParser from "cookie-parser";
 import { NestFactory } from "@nestjs/core";
 import { ValidationPipe } from "@nestjs/common";
-import * as cookieParser from "cookie-parser";
 
 import { AppModule } from "./module";
 import { AllExceptionsFilter } from "./infrastructure/exception.middleware";

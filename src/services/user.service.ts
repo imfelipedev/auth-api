@@ -1,4 +1,4 @@
-import * as bcrypt from "bcryptjs";
+import bcryptjs from "bcryptjs";
 import { users } from "@prisma/client";
 import { Injectable } from "@nestjs/common";
 
@@ -24,10 +24,10 @@ export class UserService {
     }
 
     public async compare(password: string, storePassword: string): Promise<boolean> {
-        return await bcrypt.compare(password, storePassword);
+        return await bcryptjs.compare(password, storePassword);
     }
 
     public async hash(password: string): Promise<string> {
-        return await bcrypt.hash(password, 10);
+        return await bcryptjs.hash(password, 10);
     }
 }

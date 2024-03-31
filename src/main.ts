@@ -11,6 +11,7 @@ async function bootstrap() {
             "origin": "*",
             "allowedHeaders": "*",
             "methods": "GET,PATCH,POST,DELETE,OPTIONS",
+            "credentials": true,
         }
     });
     const cookies = cookieParser();

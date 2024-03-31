@@ -16,7 +16,6 @@ export class AuthService {
     ) {}
 
     public async verify(request: Request): Promise<object> {
-        console.log(request.cookies)
         if (!request.cookies || !request.cookies["session-token"]) {
             throw new HttpException("Session-token not found.", HttpStatus.UNAUTHORIZED);
         }
@@ -47,7 +46,7 @@ export class AuthService {
 
         const expires = this.getExpirationDate();
         const token = await this.jwtService.signAsync({ username: userData.username, email: userData.email });
-        response.cookie("session-token", token, { path: "/", expires: expires, httpOnly: true, sameSite: "Strict" });
+        response.cookie("session-token", token, { path: "/", expires: expires, httpOnly: true });
         return { success: true };
     }
 

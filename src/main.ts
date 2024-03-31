@@ -6,7 +6,7 @@ import { AppModule } from "./module";
 import { AllExceptionsFilter } from "./infrastructure/exception.middleware";
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
+    const app = await NestFactory.create(AppModule, { cors: true });
     const cookies = cookieParser();
     const validator = new ValidationPipe();
     const exception = new AllExceptionsFilter();

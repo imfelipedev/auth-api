@@ -8,7 +8,7 @@
         "build": "nest build",
         "start": "nest node dist/main",
         "dev": "nest start --watch",
-        "vercel-build": "prisma generate && next build",
+        "vercel-build": "prisma generate",
         "prisma:generate": "prisma generate"
     },
     "dependencies": {

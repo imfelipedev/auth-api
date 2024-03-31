@@ -6,13 +6,13 @@ import { AppModule } from "./module";
 import { AllExceptionsFilter } from "./infrastructure/exception.middleware";
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule, { 
-        cors: {  
-            "origin": ["http://localhost:5173", "https://website-demonstration-front-end.vercel.app"],
-            "allowedHeaders": ["Content-Type"],
-            "methods": "GET,PATCH,POST,DELETE,OPTIONS",
-            "credentials": true,
-        }
+    const app = await NestFactory.create(AppModule, {
+        cors: {
+            origin: ["http://localhost", "http://localhost:5173", "https://website-demonstration-front-end.vercel.app"],
+            allowedHeaders: ["Content-Type"],
+            methods: "GET,PATCH,POST,DELETE,OPTIONS",
+            credentials: true,
+        },
     });
     const cookies = cookieParser();
     const validator = new ValidationPipe();

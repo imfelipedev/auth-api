@@ -10,7 +10,7 @@ export class AllExceptionsFilter extends BaseExceptionFilter {
         const status = exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
         response.status(status).json({
             statusCode: status,
-            message: exception.response || exception.message || "Internal Server Error",
+            message: exception.response.message || exception.message || "Internal Server Error",
         });
     }
 }

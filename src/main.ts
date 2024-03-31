@@ -10,7 +10,7 @@ async function bootstrap() {
         cors: {  
             "origin": "*",
             "allowedHeaders": "*",
-            "methods": "GET,PATCH,POST,DELETE",
+            "methods": "GET,PATCH,POST,DELETE,OPTIONS",
         }
     });
     const cookies = cookieParser();

@@ -48,17 +48,17 @@ Project structure:
 
 To run this project, you will need to add the following environment variables to your .env
 
-`EMAIL_HOST`
+`EMAIL_HOST` - Endereço provider address.
 
-`EMAIL_USERNAME`
+`EMAIL_USERNAME` - Username provider address.
 
-`EMAIL_PASSWORD`
+`EMAIL_PASSWORD` - Password provider address.
 
-`JWT_SECRET`
+`JWT_SECRET` - Hash key.
 
-`FRONT_END_URL` (example:"http://localhost")
+`FRONT_END_URL` - Domain front-end (example:"http://localhost")
 
-`DATABASE_URL` (example:"postgres://username:password@ip:port/database_name")
+`DATABASE_URL` - Database informations (example:"postgres://username:password@ip:port/database_name")
 
 ## Running in development.
 

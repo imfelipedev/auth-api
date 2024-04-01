@@ -44,6 +44,22 @@ Project structure:
 2. Clone repository.
 3. Configure the `.env` file.
 
+## Environment variables
+
+To run this project, you will need to add the following environment variables to your .env
+
+`EMAIL_HOST`
+
+`EMAIL_USERNAME`
+
+`EMAIL_PASSWORD`
+
+`JWT_SECRET`
+
+`FRONT_END_URL` (example:"http://localhost")
+
+`DATABASE_URL` (example:"postgres://username:password@ip:port/database_name")
+
 ## Running in development.
 
 Running migrate:

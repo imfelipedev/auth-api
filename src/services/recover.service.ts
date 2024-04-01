@@ -40,7 +40,7 @@ export class RecoverService {
 
         const expires = this.getExpirationDate();
         const tokenData = await this.prismaRepository.recoverys.create({ data: { user_id: userData.id, expires_at: expires } });
-        await this.emailService.send(userData.email, `${process.env.BASE_URL}/recover/${tokenData.id}`);
+        await this.emailService.send(userData.email, `${process.env.FRONT_END_URL}/recover/${tokenData.id}`);
         return { success: true };
     }
 

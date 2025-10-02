@@ -1,4 +1,4 @@
-# 🚩 Website demonstration (back-end)
+# 🚩 Authentication API — DDD Architecture & Node.js
 
 This application was developed to demonstrate my experience, knowledge and skills. In this project, the DDD architecture was used.
 
